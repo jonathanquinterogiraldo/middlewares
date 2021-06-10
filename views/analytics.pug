@@ -1,23 +1,12 @@
-
-
-    table    
-     tr
-        th Path
-        th Visits            
-     tbody     
-      each visit in visits               
-          tr 
-            td(class="note-title")= visit.path
-            td(class="note-title")= visit.count          
-    //  block body
-
-      
-// div(class="note")          
-          tr 
-            td(class="note-title")= visit.path
-            td(class="note-title")= visit.count         
+table
+    thead
+        tr 
+            th Path
+            th Visits
+    tbody 
+        each visit in visits
+            tr
+                td(class="note-title")= visit.path
+                td(class="note-body")= visit.count
     div(class="body")
-
-//block content 
-     div(class="container expand")
-    div(class="list expand") 
+block body
