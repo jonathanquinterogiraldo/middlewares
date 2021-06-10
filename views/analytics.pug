@@ -1,0 +1,19 @@
+
+block content
+  div(class="container expand")
+    div(class="list expand") 
+    table(style='width:100%', border='1')
+     tr
+        th Path
+        th Visits       
+     tr       
+      each visit in visits
+        div(class="note")     
+          tr 
+            td(class="note-title")= visit.path
+            td(class="note-title")= visit.count
+          tr
+    div(class="body")
+      block body
+
+      

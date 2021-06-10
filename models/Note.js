@@ -10,4 +10,15 @@ NoteSchema.methods.truncateBody = function() {
   }
   return this.body;
 };
-module.exports = mongoose.model("Note", NoteSchema);
+
+const VisitSchema = new mongoose.Schema({
+  path: { type: String},
+  date: { type: Date},
+  userAgent: { type: String },
+  count: { type: Number}
+});
+
+module.exports = { 
+  VisitModel : mongoose.model("Visit",VisitSchema), 
+  NoteModel : mongoose.model("Note", NoteSchema)
+};
