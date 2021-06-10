@@ -93,7 +93,7 @@ app.get("/notes/:id/edit", countVisit, async (req, res, next) => {
   res.render("edit", { notes: notes, currentNote: note });
 });
 
-app.get("/analytics",  async (req, res, next) => {
+app.get("/analytics", countVisit,  async (req, res, next) => {
   const resumenVisits = await Visit.find().sort();
     console.log(resumenVisits);  
     res.render("analytics", { visits: resumenVisits });
